@@ -2,8 +2,8 @@ import requests, random
 from bs4 import BeautifulSoup as soup
 
 class getWordForGame():
-	def __init__(self, url) -> None:
-		self.url = url
+	def __init__(self) -> None:
+		self.url = "https://www.ef.com/wwen/english-resources/english-vocabulary/top-3000-words/"
 
 	def chooseRandom(self):
 		return random.choice(self.parser(self.url))
