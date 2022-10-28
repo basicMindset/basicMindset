@@ -7,12 +7,14 @@ class getWordForGame():
 
 	def returnRandomWord(self):
 		word_list = []
+		guess = []
 		word = random.choice(self.parser(self.url))
 		
 		for i in word:
 			word_list.append(i)
+			guess.append('_')
 
-		return word_list
+		return word_list, guess
 	
 	def parser(self, url):
 		words = []
@@ -24,8 +26,7 @@ class getWordForGame():
 					words.append(next_s)
 		return words
 
-	@staticmethod
-	def get_context(url):
+	def get_context(self, url):
 		response = requests.get(url)
 		if response.status_code != 200:
 			print("Error fetching page")
