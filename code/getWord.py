@@ -6,15 +6,8 @@ class getWordForGame():
 		self.url = "https://www.ef.com/wwen/english-resources/english-vocabulary/top-3000-words/"
 
 	def returnRandomWord(self):
-		word_list = []
-		guess = []
-		word = random.choice(self.parser(self.url))
-		
-		for i in word:
-			word_list.append(i)
-			guess.append('_')
-
-		return word_list, guess
+		word = random.choice(self.parser(self.url)).upper()
+		return word
 	
 	def parser(self, url):
 		words = []
