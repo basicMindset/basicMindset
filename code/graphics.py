@@ -49,7 +49,7 @@ while not done:
     # If you want a background image, replace this clear with blit'ing the
     # background image.
     screen.fill(WHITE)
-    pg.draw.lines(screen, BLACK, False, [[100, 600], [400, 600], [250, 600], [250, 200], [400, 200], [400, 250]], 5)
+    pg.draw.lines(screen, BLACK, False, [[200, 600], [500, 600], [350, 600], [350, 200], [500, 200], [500, 250]], 8)
  
     # --- Drawing code should go here
  
